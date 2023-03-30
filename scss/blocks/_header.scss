@@ -1,0 +1,37 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+
+    @include breakpoint($bp-md) {
+      padding: 20px 15px;
+      overflow-x: auto;
+    }
+  }
+
+  &__brand {
+    margin-right: 53px;
+
+    @include breakpoint($bp-md) {
+      display: none;
+    }
+  }
+
+  &__socials {
+    margin-left: 53px;
+
+    @include breakpoint($bp-lg) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    margin-left: auto;
+
+    @include breakpoint($bp-xl) {
+      display: none;
+    }
+  }
+}

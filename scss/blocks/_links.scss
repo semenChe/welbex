@@ -1,0 +1,44 @@
+.links {
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-gray;
+
+    @include breakpoint($bp-sm) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    @include breakpoint($bp-sm) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__list_two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 50px;
+
+    @include breakpoint($bp-sm) {
+      grid-column-gap: 36px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

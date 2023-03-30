@@ -1,0 +1,18 @@
+.socials {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &_shrink &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    font-size: 20px;
+  }
+}

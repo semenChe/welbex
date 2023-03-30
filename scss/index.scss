@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-bg;
+  background-image: url("../images/bg.svg");
+  background-size: cover;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: $color-text;
+  line-height: 1.25;
+
+  @include breakpoint($bp-md) {
+    background-image: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@import "./blocks/icon";
+@import "./blocks/page";
+@import "./blocks/container";
+@import "./blocks/brand";
+@import "./blocks/navigation";
+@import "./blocks/socials";
+@import "./blocks/intro";
+@import "./blocks/gifts";
+@import "./blocks/button";
+@import "./blocks/footer";
+@import "./blocks/links";
+@import "./blocks/copyright";
+@import "./blocks/header";

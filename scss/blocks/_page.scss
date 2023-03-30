@@ -1,0 +1,9 @@
+.page {
+  &__header {
+    margin-top: 47px;
+
+    @include breakpoint($bp-md) {
+      margin-top: 0px;
+    }
+  }
+}

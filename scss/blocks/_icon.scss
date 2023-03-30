@@ -1,0 +1,15 @@
+.icon::before {
+  font-family: icomoon;
+}
+
+.icon_telegram::before {
+  content: '\e900';
+}
+
+.icon_viber::before {
+  content: '\e901';
+}
+
+.icon_whatsapp::before {
+  content: '\e902';
+}

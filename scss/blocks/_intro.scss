@@ -1,0 +1,87 @@
+.intro {
+  padding: 120px 0;
+
+  @include breakpoint($bp-md) {
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+  }
+
+  @include breakpoint($bp-md) {
+    padding: 40px 0 59px;
+  }
+
+  &__container {
+    display: flex;
+
+    @include breakpoint($bp-md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+
+    @include breakpoint($bp-md) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 362px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+
+    @include breakpoint($bp-md) {
+      max-width: 100%;
+    }
+
+    @include breakpoint($bp-sm) {
+      margin-bottom: 15px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  &__text-gradient {
+    font-weight: 900;
+    background-image: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text {
+    max-width: 275px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include breakpoint($bp-md) {
+      margin-top: 45px;
+      align-items: flex-start;
+    }
+  }
+
+  &__gifts {
+    margin-bottom: 60px;
+
+    @include breakpoint($bp-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    @include breakpoint($bp-sm) {
+      display: none;
+    }
+  }
+}

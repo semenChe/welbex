@@ -1,0 +1,22 @@
+.navigation {
+  @include breakpoint($bp-md) {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+
+    @include breakpoint($bp-md) {
+      margin-right: 16px;
+    }
+  }
+}

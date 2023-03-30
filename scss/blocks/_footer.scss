@@ -1,0 +1,47 @@
+.footer {
+  padding: 20px 0;
+
+  &__row {
+    display: flex;
+    margin-bottom: 33px;
+
+    @include breakpoint($bp-lg) {
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__links:first-child {
+    width: 25%;
+
+    @include breakpoint($bp-lg) {
+      width: 35%;
+    }
+
+    @include breakpoint($bp-md) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__links:last-child {
+    margin-left: auto;
+    width: 30%;
+    text-align: right;
+
+    @include breakpoint($bp-lg) {
+      margin-top: 30px;
+      margin-left: 0;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__socials {
+    justify-content: flex-end;
+
+    @include breakpoint($bp-lg) {
+      justify-content: flex-start;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.gifts {
+  text-align: right;
+  max-width: 300px;
+
+  @include breakpoint($bp-md) {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    background-image: $gradient-secondary;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: $color-text;
+
+    @include breakpoint($bp-sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-gradient {
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    list-style: none;
+
+    @include breakpoint($bp-sm) {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      grid-gap: 14px 10px;
+    }
+  }
+
+  @include breakpoint($bp-sm) {
+    &__item:nth-child(1) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &__item:nth-child(2) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &__item:nth-child(3) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &__item:nth-child(4) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @include breakpoint($bp-sm) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      font-family: 'Montserrat';
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &__subtitle_desktop {
+    display: block;
+
+    @include breakpoint($bp-sm) {
+      display: none;
+    }
+  }
+
+  &__subtitle_mobile {
+    display: none;
+
+    @include breakpoint($bp-sm) {
+      display: flex;
+    }
+  }
+
+  &__subtitle::before {
+    display: none;
+    margin-right: 5px;
+    width: 10px;
+    height: 1px;
+    content: "";
+    background: $gradient-secondary;
+
+    @include breakpoint($bp-sm) {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include breakpoint($bp-sm) {
+      display: none;
+    }
+  }
+}
